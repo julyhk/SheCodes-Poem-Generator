@@ -3,6 +3,16 @@ body {
   font-family: Helvetica, Arial, sans-serif;
 }
 
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.blink {
+  animation: blink 1s step-start 0s infinite;
+}
+
 a {
   color: #885df1;
 }
@@ -24,13 +34,23 @@ h1 {
   color: #272044;
 }
 
-form {
-  padding: 30px;
+.form-container {
   background-color: #fff;
-  border-radius: 10px;
-  display: flex;
-  box-shadow: 0px 20px 60px rgba(65, 50, 100, 0.08);
   margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 20px 60px rgba(65, 50, 100, 0.08);
+  padding: 15px 20px;
+}
+
+form {
+  display: flex;
+}
+
+.hint {
+  line-height: 1.5;
+  font-size: 12px;
+  margin: 5px 0px 0px 10px;
+  opacity: 0.6;
 }
 
 .instructions {
@@ -61,6 +81,10 @@ form {
   line-height: 2;
   border-left: 3px solid #885df1;
   box-shadow: 0px 4px 30px 0px rgba(39, 33, 66, 0.03);
+}
+
+.hidden {
+  display: none;
 }
 
 .poem strong {
